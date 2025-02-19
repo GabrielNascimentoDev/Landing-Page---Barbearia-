@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: #edeaef;
+  font-size: 33px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  color: #d34040;
+  animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  padding: 8px 24px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.hero {
+  color: #fefbff;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  font-size: 45px;
+  max-width: 940px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+  line-height: 150%;
+  font-size: 20px;
+}
+
+.hero-buttom {
+  border: 0;
+  padding: 14px 28px;
+  margin-top: 70px;
+  background-color: #D94140;
+  color: #fefbff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.hero-buttom:hover {
+  animation: scaleButton 0.8s infinite alternate;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 30px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  background-color: #06121E;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 45px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  font-size: 18px;
+  font-weight: 150%;
+  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-content {
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+.services {
+  background-color: #ffffff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-text h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 150%;
+  margin-bottom: 14px;
+}
+.services-text p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 50px;
+  max-width: 850px;
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefbff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+.haircut img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.3s;
+}
+
+.haircut img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.haircuts-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fefbff;
+  z-index: 99;
+}
+.haircuts-info button {
+  border: 0px solid #d34040;
+  background-color: #d34040;
+  border-radius: 5px;
+  padding: 6px 8px;
+  color: #edeaef;
+  cursor: default;
+}
+
+@media screen and (max-width: 1200px) {
+  .haircuts {
+    flex-direction: column;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 25px;
+  color: #ffffff;
+}
+.footer .footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons a:hover i {
+  color: #d34040;
+  animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  right: 108px;
+  bottom: 10px;
+  top: 860px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 75px;
+  transition: transform 0.5s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp .span-tool {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -140px;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #161617;
+  color: #edeaef;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.btn-whatsapp:hover .span-tool {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-whatsapp {
+    display: none;
+  }
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Sora", sans-serif;
+  position: relative;
+  background-color: #06121E;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
