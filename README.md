@@ -4,13 +4,12 @@ Este repositório contém o código-fonte de uma **landing page moderna e respon
 
 ## 🚀 Tecnologias utilizadas  
 - **HTML5**: Estruturação do conteúdo  
-- **CSS3**: Estilização e responsividade  
-- **JavaScript**: Interatividade e animações (se houver)  
+- **SASS**: Estilização e responsividade  
+- **JavaScript**: Interatividade e animações 
 
 ## 🎯 Funcionalidades  
 - ✅ Design moderno e elegante  
 - ✅ Seção de serviços e preços  
-- ✅ Formulário de contato/agendamento  
 - ✅ Integração com redes sociais  
 - ✅ Totalmente responsivo 📱💻  
 
